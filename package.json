@@ -8,6 +8,7 @@
     "build": "tsc && echo 'build success -' `date`",
     "watch": "tsc -w",
     "test": "jest",
+    "clean": "rm -f ./lib/*.js ./lib/*.d.ts ./bin/*.js ./bin/*.d.ts ./test/*.js ./test/*.d.ts",
     "lint": "eslint --ext .ts ."
   },
   "devDependencies": {
