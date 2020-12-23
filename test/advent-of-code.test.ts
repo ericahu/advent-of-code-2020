@@ -2,11 +2,13 @@ import * as day01 from '../lib/day01';
 import * as day02 from '../lib/day02';
 import * as day03 from '../lib/day03';
 import * as day04 from '../lib/day04';
+import * as day05 from '../lib/day05';
 import { getInput } from '../lib/util';
 
 describe('Day 1', () => {
   const sampleInput = ['1721', '979', '366', '299', '675', '1456'];
   const input = getInput('../input/day01.in');
+
   it('Passes part 1 (sample)', () => {
     const output = day01.part01(sampleInput);
     expect(output).toBe('514579');
@@ -28,6 +30,7 @@ describe('Day 1', () => {
 describe('Day 2', () => {
   const sampleInput = ['1-3 a: abcde', '1-3 b: cdefg', '2-9 c: ccccccccc'];
   const input = getInput('../input/day02.in');
+
   it('Passes part 1 (sample)', () => {
     const output = day02.part01(sampleInput);
     expect(output).toBe(2);
@@ -61,6 +64,7 @@ describe('Day 3', () => {
     '.#..#...#.#',
   ];
   const input = getInput('../input/day03.in');
+
   it('Passes part 1 (sample)', () => {
     const output = day03.part01(sampleInput);
     expect(output).toBe(7);
@@ -87,6 +91,7 @@ describe('Day 4', () => {
     'hcl:#cfa07d eyr:2025 pid:\niyr:2011 ecl:brn hgt:59in',
   ];
   const input = getInput('../input/day04.in', '\n\n');
+
   it('Passes part 1 (sample)', () => {
     const output = day04.part01(sampleInput1);
     expect(output).toBe(2);
@@ -114,5 +119,23 @@ describe('Day 4', () => {
   it('Passes part 2', () => {
     const output = day04.part02(input);
     expect(output).toBe(127);
+  });
+});
+
+describe('Day 5', () => {
+  const sampleInput = ['BFFFBBFRRR', 'FFFBBBFRRR', 'BBFFBBFRLL', 'FBFBBFFRLR', 'FBFBBFFRLR'];
+  const input = getInput('../input/day05.in');
+
+  it('Passes part 1 (sample)', () => {
+    const output = day05.part01(sampleInput);
+    expect(output).toBe(820);
+  });
+  it('Passes part 1', () => {
+    const output = day05.part01(input);
+    expect(output).toBe(965);
+  });
+  it('Passes part 2', () => {
+    const output = day05.part02(input);
+    expect(output).toBe(524);
   });
 });
