@@ -3,6 +3,7 @@ import * as day02 from '../lib/day02';
 import * as day03 from '../lib/day03';
 import * as day04 from '../lib/day04';
 import * as day05 from '../lib/day05';
+import * as day06 from '../lib/day06';
 import { getInput } from '../lib/util';
 
 describe('Day 1', () => {
@@ -137,5 +138,27 @@ describe('Day 5', () => {
   it('Passes part 2', () => {
     const output = day05.part02(input);
     expect(output).toBe(524);
+  });
+});
+
+describe('Day 6', () => {
+  const sampleInput = ['abc', 'a\nb\nc', 'ab\nac', 'a\na\na\na', 'b'];
+  const input = getInput('../input/day06.in', '\n\n');
+
+  it('Passes part 1 (sample)', () => {
+    const output = day06.part01(sampleInput);
+    expect(output).toBe(11);
+  });
+  it('Passes part 1', () => {
+    const output = day06.part01(input);
+    expect(output).toBe(6335);
+  });
+  it('Passes part 2 (sample)', () => {
+    const output = day06.part02(sampleInput);
+    expect(output).toBe(6);
+  });
+  it('Passes part 2', () => {
+    const output = day06.part02(input);
+    expect(output).toBe(3392);
   });
 });
